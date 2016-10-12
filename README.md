@@ -43,7 +43,7 @@ sass --watch styles:css
 ![sass-vs-scss](/sass-vs-scss.jpg?raw=true "sass-vs-scss")
 
 ### Pros de Sass
-- Más conciso (no {} ni ; además de usar + en lugar de @import por ejemplo), menos código
+- Más conciso (no `{}` ni `;` además de usar `+` en lugar de `@import`, por ejemplo), menos código
 - Fácil de leer
 
 ### Pros de SCSS
@@ -59,3 +59,6 @@ sass-convert style.sass style.scss
 ```
 sass-convert style.scss style.sass
 ```
+
+## Shell Interactivo
+![interactive-shell](/interactive-shell.png?raw=true "interactive-shell")
