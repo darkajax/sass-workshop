@@ -3,7 +3,6 @@
 ### Temas
 - Setting up
 - Features
-- Tips
 
 ### Cómo instalar Sass?
 
@@ -153,12 +152,35 @@ sass-convert style.scss style.sass
 ```
 
 ## Nesting
+#### Este código:
+```scss
+main p {
+  color: #00ff00;
+  width: 97%;
 
+  .redbox {
+    background-color: #ff0000;
+    color: #000000;
+  }
+}
+```
+
+#### Compila a:
+
+```css
+#main p {
+  color: #00ff00;
+  width: 97%; }
+  #main p .redbox {
+    background-color: #ff0000;
+    color: #000000; }
+```
 
 ## Imports / Partials
 La directiva `@import` se utiliza para incluir otros archivos en un archivo de Sass. Los parciales son archivos que no generan css y que se utilizan para incluir código de un archivo a otro, su nombre empieza con `_` (`_partial.scss`).
 
 ## Placeholder selectors
+El selector lleva `%` antes de su nombre y se utiliza con `@extend`
 
 ## Shell Interactivo
 ![interactive-shell](/interactive-shell.png?raw=true "interactive-shell")
