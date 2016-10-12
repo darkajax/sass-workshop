@@ -44,6 +44,7 @@ sass --watch styles:css
 - SassScript
   - Shell interactivo
   - Variables
+  - Diferentes tipos de datos
   - Operaciones
   - Condicionales
   - Mixins
@@ -84,6 +85,23 @@ $variable:  1px;
 
 ```sass
 .class1 {
-  $scope-variable: 
+  $scope-variable: red;
 }
 ```
+
+```sass
+.class2 {
+  $globalized-variable: blue !global;
+}
+```
+
+**Nota:** `-` y `_` son intercambiables en nombres de variables y otros identificadores de Sass (por ejemplo `$variable_1` = `$variable-1`
+
+## Tipos de datos
+- numbers (e.g. 1.2, 13, 10px)
+- strings of text, with and without quotes (e.g. "foo", 'bar', baz)
+- colors (e.g. blue, #04a3f9, rgba(255, 0, 0, 0.5))
+- booleans (e.g. true, false)
+- nulls (e.g. null)
+- lists of values, separated by spaces or commas (e.g. 1.5em 1em 0 2em, Helvetica, Arial, sans-serif)
+- maps from one value to another (e.g. (key1: value1, key2: value2))
