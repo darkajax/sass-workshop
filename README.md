@@ -32,14 +32,23 @@ sass --watch styles:css
 - Shell interactivo
 - Nesting
 - Variables
+- Imports/Partials
 - Operaciones
 - Mixins
-- Imports/Partials
+- Funciones
 - Placeholder selectors
 
 ## Sintaxis
 
 ![sass-vs-scss](/sass-vs-scss.jpg?raw=true "sass-vs-scss")
+
+### Pros de Sass
+- Más conciso (no {} ni ; además de usar + en lugar de @import por ejemplo), menos código
+- Fácil de leer
+
+### Pros de SCSS
+- Más flexible/expresivo
+- Siendo una extensión de la sintaxis de CSS, cualquier archivo CSS es un archivo SCSS válido con el mismo significado
 
 ### Convertir de Sass a SCSS
 ```
