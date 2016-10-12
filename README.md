@@ -121,9 +121,10 @@ sass --watch styles:css -t compact
     - Interpolación
   - Diferentes tipos de datos
   - Operaciones
+  - Funciones "predefinidas"
   - Condicionales
   - Mixins
-  - Funciones
+  - Funciones "propias"
 - Nesting
   - Parent selector (`&`)
 - Imports/Partials
@@ -229,11 +230,11 @@ $class-part: 'part';
 - lists of values, separated by spaces or commas (e.g. `1.5em 1em 0 2em, Helvetica, Arial, sans-serif`)
 - maps (e.g. `(key1: value1, key2: value2)`)
 
-### Operaciones
+## Operaciones
 - Numéricas
 - Color
 - Strings
-- Listas
+- Booleanas
 
 **Nota:** Todos los tipos de datos soportan los operadores de igualdad (== and !=).
 
@@ -253,3 +254,24 @@ Mismas operaciones que en el caso de las numéricas, pero por partes (r/g/b)
 - Concatenación +
 **Nota:** Si una variable con comillas se concatena a otra sin comillas, el resultado tendra comillas, si es tan en el órden opuesto el resultado **no** tendrá comillas.
 
+#### Booleanas
+- and
+- or
+- not
+
+## Funciones "predefinidas"
+
+#### Este código:
+```scss
+p {
+  color: hsl(0, 100%, 50%);
+}
+```
+
+#### Compila a:
+````css
+p {
+  color: #ff0000; }
+```
+
+**[Lista de funciones "predefinidas"](http://sass-lang.com/documentation/Sass/Script/Functions.html)**
