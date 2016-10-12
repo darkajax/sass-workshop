@@ -28,12 +28,14 @@ sass --watch styles:css
 ```
 
 ## Features
-- Shell Interactivo
+- 2 Tipos de sintaxis
+- Shell interactivo
 - Nesting
 - Variables
 - Operaciones
 - Mixins
 - Imports/Partials
+- Placeholder selectors
 
 ## Sintaxis
 
