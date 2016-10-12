@@ -43,6 +43,7 @@ sass --watch styles:css
 - 2 Tipos de sintaxis
 - SassScript
   - Shell interactivo
+  - Comments
   - Variables
     - Interpolación
   - Diferentes tipos de datos
@@ -79,6 +80,35 @@ sass-convert style.scss style.sass
 
 ## Shell Interactivo
 ![interactive-shell](/interactive-shell.png?raw=true "interactive-shell")
+
+## Comments
+
+#### Este código:
+```sass
+/* This comment is
+ * several lines long.
+ * since it uses the CSS comment syntax,
+ * it will appear in the CSS output. */
+body { color: black; }
+
+// These comments are only one line long each.
+// They won't appear in the CSS output,
+// since they use the single-line comment syntax.
+a { color: green; }
+```
+
+#### Compila a:
+```sass
+/* This comment is
+ * several lines long.
+ * since it uses the CSS comment syntax,
+ * it will appear in the CSS output. */
+body {
+  color: black; }
+
+a {
+  color: green; }
+```
 
 ## Variables
 ```sass
@@ -118,11 +148,12 @@ $class-part: 'part';
 ```
 
 ## Tipos de datos
-- numbers (e.g. 1.2, 13, 10px)
-- strings of text, with and without quotes (e.g. "foo", 'bar', baz)
-- colors (e.g. blue, #04a3f9, rgba(255, 0, 0, 0.5))
-- booleans (e.g. true, false)
-- nulls (e.g. null)
-- lists of values, separated by spaces or commas (e.g. 1.5em 1em 0 2em, Helvetica, Arial, sans-serif)
-- maps from one value to another (e.g. (key1: value1, key2: value2))
+- numbers (e.g. `1.2`, `13`, `10px`)
+- strings of text, with and without quotes (e.g. `"foo"`, `'bar'`, `baz`)
+- colors (e.g. `blue`, `#04a3f9`, `rgba(255, 0, 0, 0.5)`)
+- booleans (e.g. `true`, `false`)
+- nulls (e.g. `null`)
+- lists of values, separated by spaces or commas (e.g. `1.5em 1em 0 2em, Helvetica, Arial, sans-serif`)
+- maps (e.g. `(key1: value1, key2: value2)`)
 
+### Operaciones
