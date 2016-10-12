@@ -39,6 +39,79 @@ sass --watch input.scss:output.css
 sass --watch styles:css
 ```
 
+### Estilos de output
+- nested (default)
+- compact
+- expanded
+- compressed
+
+#### Uso
+```
+sass --watch styles:css --style compressed
+sass --watch styles:css -t compact
+```
+
+#### Este código:
+```scss
+.widget-social {
+    text-align: right;
+
+    a,
+    a:visited {
+        padding: 0 3px;
+        color: #222222;
+        color: rgba(34, 34, 34, 0.77);
+     }
+
+    a:hover {
+        color: #B00909;
+    }
+
+}
+```
+
+#### Compila a (nested):
+```css
+.widget-social {
+  text-align: right; }
+  .widget-social a,
+  .widget-social a:visited {
+    padding: 0 3px;
+    color: #222222;
+    color: rgba(34, 34, 34, 0.77); }
+  .widget-social a:hover {
+    color: #B00909; }
+```
+
+#### Compila a (expanded):
+```css
+.widget-social {
+  text-align: right;
+}
+.widget-social a,
+.widget-social a:visited {
+  padding: 0 3px;
+  color: #222222;
+  color: rgba(34, 34, 34, 0.77);
+}
+.widget-social a:hover {
+  color: #B00909;
+}
+```
+
+#### Compila a (compact):
+```css
+.widget-social { text-align: right; }
+.widget-social a, .widget-social a:visited { padding: 0 3px; color: #222222; color: rgba(34, 34, 34, 0.77); }
+.widget-social a:hover { color: #B00909; }
+```
+
+#### Compila a (compressed):
+```css
+.widget-social{text-align:right}.widget-social a,.widget-social a:visited{padding:0 3px;color:#222222;color:rgba(34,34,34,0.77)}.widget-social a:hover{color:#B00909}
+```
+
+
 ## Features
 - 2 Tipos de sintaxis
 - SassScript
@@ -84,7 +157,7 @@ sass-convert style.scss style.sass
 ## Comments
 
 #### Este código:
-```sass
+```scss
 /* This comment is
  * several lines long.
  * since it uses the CSS comment syntax,
@@ -98,7 +171,7 @@ a { color: green; }
 ```
 
 #### Compila a:
-```sass
+```scss
 /* This comment is
  * several lines long.
  * since it uses the CSS comment syntax,
@@ -111,17 +184,17 @@ a {
 ```
 
 ## Variables
-```sass
+```scss
 $variable:  1px;
 ```
 
-```sass
+```scss
 .class1 {
   $scope-variable: red;
 }
 ```
 
-```sass
+```scss
 .class2 {
   $globalized-variable: blue !global;
 }
@@ -132,7 +205,7 @@ $variable:  1px;
 ### Interpolación
 
 #### Este código:
-```sass
+```scss
 $class-part: 'part';
 
 .{#class-part}-1 {
@@ -157,3 +230,4 @@ $class-part: 'part';
 - maps (e.g. `(key1: value1, key2: value2)`)
 
 ### Operaciones
+
