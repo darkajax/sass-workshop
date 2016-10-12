@@ -1,0 +1,3 @@
+@function header-width ($n) {
+	@return $n * $header-base-size;
+}

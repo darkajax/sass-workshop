@@ -1,0 +1,18 @@
+@mixin some-text {
+	 font: {
+	 	weight: bold;
+	 	size:	20px;
+	 }
+	 color: $red;
+	 text: {
+	 	decoration: overline;
+	 }
+}
+
+@mixin some-border ($color: black, $width: 1px, $style: solid) {
+	border: {
+		color: $color;
+		width: $width;
+		style: $style;
+	}
+}

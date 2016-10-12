@@ -1,0 +1,46 @@
+@import 'variables', 'mixins', 'functions';
+
+// @import 'mixins';
+
+h1 {
+	@include some-text();
+	@include some-border(orange, 2px, outset);
+	width: header-width(7);
+}
+
+div {
+	background: $div_background_color;
+	color: $div-text-color;
+	&:hover {
+		$div-hover-background-color: orange !global;
+		background: $div-hover-background-color;
+	}
+	&::selection {
+		color: $div-hover-background-color;	
+	}
+}
+
+section {
+	margin: $margin;
+}
+
+.input-#{$one} {
+	background: $red;
+}
+
+.#{$section}-#{$one} {
+	background: gray;
+}
+
+
+@each $input, $size in $input-sizes {
+	.input-#{$input} {
+		width: $size;
+	}
+}
+
+@for $i from 1 through 5 {
+	.button-#{$i} {
+		width: $base-button-size * $i;
+	}
+}
