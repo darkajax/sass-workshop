@@ -1,9 +1,21 @@
 # sass-workshop
 
-### Instalar Sass
+### Temas
+- Setting up
+- Features
+- Tips
+
+### Cómo instalar Sass?
+
+#### Mac
 
 ```
 sudo gem install sass
+```
+
+#### Linux (habiendo instalado Ruby previamente)
+```
+sudo su -c "gem install sass"
 ```
 
 ### Verificar
@@ -29,13 +41,15 @@ sass --watch styles:css
 
 ## Features
 - 2 Tipos de sintaxis
-- Shell interactivo
+- SassScript
+  - Shell interactivo
+  - Variables
+  - Operaciones
+  - Condicionales
+  - Mixins
+  - Funciones
 - Nesting
-- Variables
 - Imports/Partials
-- Operaciones
-- Mixins
-- Funciones
 - Placeholder selectors
 
 ## Sintaxis
@@ -66,4 +80,10 @@ sass-convert style.scss style.sass
 ## Variables
 ```sass
 $variable:  1px;
+```
+
+```sass
+.class1 {
+  $scope-variable: 
+}
 ```
