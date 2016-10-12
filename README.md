@@ -62,3 +62,8 @@ sass-convert style.scss style.sass
 
 ## Shell Interactivo
 ![interactive-shell](/interactive-shell.png?raw=true "interactive-shell")
+
+## Variables
+```sass
+$variable:  1px;
+```
