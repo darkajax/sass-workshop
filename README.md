@@ -114,6 +114,10 @@ sass --watch styles:css -t compact
 
 ## Features
 - 2 Tipos de sintaxis
+- Nesting
+  - Parent selector (`&`)
+- Imports/Partials
+- Placeholder selectors
 - SassScript
   - Shell interactivo
   - Comments
@@ -125,10 +129,6 @@ sass --watch styles:css -t compact
   - Condicionales
   - Mixins
   - Funciones "propias"
-- Nesting
-  - Parent selector (`&`)
-- Imports/Partials
-- Placeholder selectors
 
 ## Sintaxis
 
@@ -151,6 +151,14 @@ sass-convert style.sass style.scss
 ```
 sass-convert style.scss style.sass
 ```
+
+## Nesting
+
+
+## Imports / Partials
+La directiva `@import` se utiliza para incluir otros archivos en un archivo de Sass. Los parciales son archivos que no generan css y que se utilizan para incluir código de un archivo a otro, su nombre empieza con `_` (`_partial.scss`).
+
+## Placeholder selectors
 
 ## Shell Interactivo
 ![interactive-shell](/interactive-shell.png?raw=true "interactive-shell")
@@ -187,6 +195,27 @@ a {
 ## Variables
 ```scss
 $variable:  1px;
+```
+
+#### Este código:
+```scss
+$variable:   'something';
+$variable:   'something else' !default;
+$variable-2: 'some other thing' !default; 
+
+.test {
+  content: $variable;
+  content: $variable-2;
+}
+```
+
+#### Compila a:
+```css
+.test {
+  content: 'something';
+  content: 'some other thing';
+}
+
 ```
 
 ```scss
@@ -266,6 +295,11 @@ Mismas operaciones que en el caso de las numéricas, pero por partes (r/g/b)
 p {
   color: hsl(0, 100%, 50%);
 }
+// O el siguiente equivalente con argumentos explícitos
+// p {
+//  color: hsl($hue: 0, $saturation: 100%, $lightness: 50%);
+// }
+
 ```
 
 #### Compila a:
@@ -275,3 +309,21 @@ p {
 ```
 
 **[Lista de funciones "predefinidas"](http://sass-lang.com/documentation/Sass/Script/Functions.html)**
+
+## Condicionales
+- if()
+
+```scss
+if(true, 1px, 2px) => 1px
+if(false, 1px, 2px) => 2px
+```
+- @if (y @else if / @else)
+- @for
+- @each
+- @hwhile
+
+## Mixins
+Se usan `@mixin` e `@include`
+
+## Funciones "propias"
+Se usa `@function`
