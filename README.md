@@ -17,7 +17,7 @@ sass -v
 sass input.scss output.css
 ```
 
-### Wacha el archivo, ese
+### Wacha el archivo ese :sunglasses:
 ```
 sass --watch input.scss:output.css
 ```
@@ -27,7 +27,24 @@ sass --watch input.scss:output.css
 sass --watch styles:css
 ```
 
-### Sintaxis
+## Features
+- Shell Interactivo
+- Nesting
+- Variables
+- Operaciones
+- Mixins
+- Imports/Partials
+
+## Sintaxis
 
 ![sass-vs-scss](/sass-vs-scss.jpg?raw=true "sass-vs-scss")
 
+### Convertir de Sass a SCSS
+```
+sass-convert style.sass style.scss
+```
+
+### Convertir de SCSS a Sass
+```
+sass-convert style.scss style.sass
+```
