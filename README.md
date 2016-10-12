@@ -44,12 +44,14 @@ sass --watch styles:css
 - SassScript
   - Shell interactivo
   - Variables
+    - Interpolación
   - Diferentes tipos de datos
   - Operaciones
   - Condicionales
   - Mixins
   - Funciones
 - Nesting
+  - Parent selector (`&`)
 - Imports/Partials
 - Placeholder selectors
 
@@ -97,6 +99,24 @@ $variable:  1px;
 
 **Nota:** `-` y `_` son intercambiables en nombres de variables y otros identificadores de Sass (por ejemplo `$variable_1` = `$variable-1`
 
+### Interpolación
+
+#### Este código:
+```sass
+$class-part: 'part';
+
+.{#class-part}-1 {
+  width: 500px;
+}
+```
+
+#### Compila a:
+```css
+.part-1 {
+  width: 500px;
+}
+```
+
 ## Tipos de datos
 - numbers (e.g. 1.2, 13, 10px)
 - strings of text, with and without quotes (e.g. "foo", 'bar', baz)
@@ -105,3 +125,4 @@ $variable:  1px;
 - nulls (e.g. null)
 - lists of values, separated by spaces or commas (e.g. 1.5em 1em 0 2em, Helvetica, Arial, sans-serif)
 - maps from one value to another (e.g. (key1: value1, key2: value2))
+
