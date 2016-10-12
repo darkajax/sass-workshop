@@ -230,4 +230,26 @@ $class-part: 'part';
 - maps (e.g. `(key1: value1, key2: value2)`)
 
 ### Operaciones
+- Numéricas
+- Color
+- Strings
+- Listas
+
+**Nota:** Todos los tipos de datos soportan los operadores de igualdad (== and !=).
+
+#### Numéricas
+- Suma +
+- Resta -
+- Multiplicación *
+- División /
+- Modulo %
+
+**Nota:** Existen casos especiales respecto a las restas y a las divisiones. **[más detalles aquí](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#division-and-slash)**
+
+#### Color
+Mismas operaciones que en el caso de las numéricas, pero por partes (r/g/b)
+
+#### Strings
+- Concatenación +
+**Nota:** Si una variable con comillas se concatena a otra sin comillas, el resultado tendra comillas, si es tan en el órden opuesto el resultado **no** tendrá comillas.
 
