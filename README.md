@@ -348,4 +348,4 @@ if(false, 1px, 2px) => 2px
 Se usan `@mixin` e `@include`
 
 ## Funciones "propias"
-Se usa `@function`
+Se usa `@function` para definirlas, y deben de regresar un valor con `@return`
